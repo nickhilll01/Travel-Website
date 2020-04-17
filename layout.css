@@ -1,0 +1,41 @@
+html{
+	position: relative;
+	min-height: 100%;
+}
+body{
+	margin-bottom: 90px;	
+}
+.head_wrapper{
+	height: 550px;	
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 8px;
+}
+
+.fonts{
+	font-family: 'Dancing Script', cursive;
+	text-align: center;	
+    color:  #37120a;
+    margin-bottom:3px;
+}
+
+.butt{
+	margin: 10px;
+}
+
+.foot{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	background-color: #f5f5f5;
+}
+
+.box{
+	width: 100%	;
+	padding: 0 15px;
+}

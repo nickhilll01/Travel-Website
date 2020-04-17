@@ -1,0 +1,7 @@
+													Things to Add
+
+-> Make all explore buttons work. Add carousel in it with catchy images. Small description about the place about location and weather icon for present climate conditions.  Reflect culture , popular things to do and try. suitable for option - adults , family , adventure , history. Booking option.
+-> Place by choice -> Historical , adventurous , romantic, culturally rich , natural beauty , wildlife, mix of everything , brave enough places - iraq,syria,afghanistan, pakistan.
+-> travel tricks and tips. - how to pack , do's and dont's , environmental friendly, safety measures, documents.
+-> flights , hotels , rooms - cards with pricing , capacity , location and all.
+-> sign in , sign up forms.
