@@ -1,213 +1,434 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Incredible India</title>
-	<link rel="stylesheet" type="text/css" href="india.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="layout.css">
-  <link href="https://fonts.googleapis.com/css?family=Caveat|Dancing+Script|EB+Garamond|Indie+Flower|Liu+Jian+Mao+Cao|Pacifico&display=swap" rel="stylesheet"> 
+  <title>Incredible India</title>
+  <link rel="stylesheet" type="text/css" href="india.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="layout.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Caveat|Dancing+Script|EB+Garamond|Indie+Flower|Liu+Jian+Mao+Cao|Pacifico&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-<!-- Navigation -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="layout.html"><span style="color:  #37120a">iTravel</span></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li> 
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
-      <li class="nav-item dropdown active">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Find Discount 
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Flights</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Hotels</a>
-          <a class="dropdown-item" href="#">Restraunts</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Sign In</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Sign Up</a>
-      </li>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <b> <a class="navbar-brand fonts" href="layout.html"><span style="color:  #37120a; ">iTravel</span></a></b>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item active">
+          <a class="nav-link fonts" href="layout.html">Home <span class="sr-only">(current)</span></a>
+        </li> -->
+        <li class="nav-item active">
+          <a class="nav-link fonts" href="#">Contact</a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle fonts" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Find Discount
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Flights</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item fonts" href="#">Hotels</a>
+            <a class="dropdown-item fonts" href="#">Restraunts</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled fonts" href="#">Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled fonts" href="#">Sign Up</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search Places to Travel" aria-label="Search">
+        <button class="btn btn-outline-dark my-2 my-sm-0 fonts" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <h1 class="fonts" style="margin-bottom: 8px;">India</h1>
+  <!-- Carousel -->
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+      <li data-target="#demo" data-slide-to="3"></li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search Places to Travel" aria-label="Search">
-      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
- <!-- Carousel -->
-<div id="demo" class="carousel slide" data-ride="carousel">
 
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-    <li data-target="#demo" data-slide-to="3"></li>
-  </ul>
-  
-  <!-- The slideshow -->
-  <div class="carousel-inner crsl container-fluid">
-    <div class="carousel-item active">
-      <img class = "image" src="india_wall.jpg" alt="Los Angeles" >
-      <div class="carousel-caption">
-        <h3>India</h3>
-        <p>Atithi Devo Bhava</p>
+    <!-- The slideshow -->
+    <div class="carousel-inner crsl container-fluid">
+      <div class="carousel-item active">
+        <img class="image" src="india.jpg" alt="New York">
+        <div class="carousel-caption">
+          <h3>The Taj Mahal</h3>
+          <p>One of The Seven Wonders of the world.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="image" src="umaid.jpg" alt="Chicago">
+        <div class="carousel-caption">
+          <h3>Umaid Bhavan Palace , Jaipur</h3>
+          <p>A place rich with history and many well preserved artifacts.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="image" src="grt_lakes.jpg" alt="New York">
+        <div class="carousel-caption">
+          <h3>Kashmir Great lakes trek</h3>
+          <p>A breathtaking trek above the valley of Kashmir.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="image" src="golden_temple.jpg" alt="New York">
+        <div class="carousel-caption">
+          <h3>Golden Temple , Amritsar</h3>
+          <p>The most holy pilgrimage site of Sikhism.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="varanasi.jpg" alt="New York">
+        <div class="carousel-caption">
+          <h3>Varanasi</h3>
+          <p>The spiritual capital of India and one of the most ancient place in the world.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="image" src="andaman.jpg" alt="New York">
+        <div class="carousel-caption">
+          <h3>Andaman and Nicobar Island</h3>
+          <p>A group of 572 islands at the juncture of Bay of Bengal and Arabian Sea.</p>
+        </div>
       </div>
     </div>
-    <div class="carousel-item">
-      <img class = "image"src="umaid.jpg" alt="Chicago" >
-      <div class="carousel-caption">
-        <h3>Umaid Bhavan Palace , Jaipur</h3>
-        <p>A place rich with history and many well preserved artifacts.</p>
-      </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <hr class="my-4">
+    <div class="row">
+      <h2 class=" col-md-12 col-sm-12"> History</h2>
+      <p class="content-para col-md-9.5 col-xs-12 ">"India is a land of ancient civilizations. India's social, economic,
+        and cultural configurations are the products of a long process of regional expansion. Indian history begins with
+        the birth of the Indus Valley Civilization and the coming of the Aryans. These two phases are usually described
+        as the pre-Vedic and Vedic age. Hinduism arose in the Vedic period."</p>
+      <img src="india-history.jpg" class="img-content  col-sm-2.5 col-xs-12 " alt='History'>
     </div>
-    <div class="carousel-item">
-      <img class = "image"src="grt_lakes.jpg" alt="New York" >
-      <div class="carousel-caption">
-        <h3>Kashmir Great lakes trek</h3>
-        <p>A breathtaking trek above the valley of Kashmir.</p>
-      </div>
+
+
+    <hr class="my-4">
+    <div class="row">
+      <h2 class="col-md-12 col-xs-12"> Culture</h2>
+      <img src="india-culture.jpg" class=" img-content col-xs-12 col-sm-2.5" alt='History'>
+      <p class="col-md-9.5 col-sm-9.5 content-para ">"Culture is defined as a people’s way of life. It also entails how
+        they dress, how they speak, the type of food they eat, the manner in which they worship, and their art among
+        many other things.
+        Indian Culture is one of the oldest cultures in the world.Because of the population diversity, there is immense
+        variety in Indian culture. The Indian culture is a blend of various cultures belonging to belonging to diverse
+        religion, castes, regions follow their own tradition and culture."</p>
     </div>
-    <div class="carousel-item">
-      <img class = "image"src="golden_temple.jpg" alt="New York" >
-      <div class="carousel-caption">
-        <h3>Golden Temple , Amritsar</h3>
-        <p>The most holy pilgrimage site of Sikhism.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="varanasi.jpg" alt="New York" >
-      <div class="carousel-caption">
-        <h3>Varanasi</h3>
-        <p>The spiritual capital of India and one of the most ancient place in the world.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img class = "image"src="india.jpg" alt="New York" >
-      <div class="carousel-caption">
-        <h3>The Taj Mahal</h3>
-        <p>One of The Seven Wonders of the world.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img class = "image"src="andaman.jpg" alt="New York" >
-      <div class="carousel-caption">
-        <h3>Andaman and Nicobar Island</h3>
-        <p>A group of 572 islands at the juncture of Bay of Bengal and Arabian Sea.</p>
-      </div>
+
+
+    <hr class="my-4">
+    <div class="row">
+      <h2 class="col-md-12 col-sm-12"> Food</h2>
+      <p class="col-md-9.5 col-xs-12 content-para">"Indian cuisine consists of a wide variety of regional and
+        traditional cuisines native to the Indian subcontinent. Given the range of diversity in soil type, climate,
+        culture, ethnic groups, and occupations, these cuisines vary substantially from each other and use locally
+        available spices, herbs, vegetables, and fruits. Indian food is also heavily influenced by religion, in
+        particular Hinduism, cultural choices and traditions.[1] The cuisine is also influenced by centuries of Islamic
+        rule, particularly the Mughal rule."</p>
+      <img src="food_in.jpg" class="img-content  col-sm-2.5 col-xs-12" alt='History'>
     </div>
   </div>
-  
-  <!-- Left and right controls -->	
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-</div>
-
-<!-- Content -->
-<div class="container">
   <hr class="my-4">
-  <div class="row">
-    <h2 class = " col-md-12 col-sm-12"> History</h2>
-    <p class="content-para col-md-9.5 col-xs-12 ">"India is a land of ancient civilizations. India's social, economic, and cultural configurations are the products of a long process of regional expansion. Indian history begins with the birth of the Indus Valley Civilization and the coming of the Aryans. These two phases are usually described as the pre-Vedic and Vedic age. Hinduism arose in the Vedic period."</p>
-    <img src="india-history.jpg" class="img-content  col-sm-2.5 col-xs-12 " alt='History'>
+
+  <!-- Places to visit -->
+
+  <div class="container ">
+
+
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+      <!--Controls-->
+      <!-- <div class="controls-top">
+      <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+      <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+    </div> -->
+      <!--/.Controls-->
+
+      <!--Indicators-->
+      <ul class="carousel-indicators">
+        <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+        <li data-target="#multi-item-example" data-slide-to="1"></li>
+        <li data-target="#multi-item-example" data-slide-to="2"></li>
+        <li data-target="#multi-item-example" data-slide-to="3"></li>
+      </ul>
+      <!--/.Indicators-->
+
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+
+        <!--First slide-->
+        <div class="carousel-item active">
+
+          <div class="row">
+            <h2 class="col-md-12 col-sm-12 center"> Places to visit</h2>
+
+            <div class="col-md-4">
+              <div class="card mb-2">
+                <img class="card-img-top" style="height: 250px;" src="rajasthan.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title fonts">Rajasthan</h4>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" style="height: 250px;" src="spiti.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title fonts">Lahaul And Spiti</h4>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" style="height: 250px;" src="jaipur.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title fonts">Jaipur</h4>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--/.First slide-->
+
+        <!--Second slide-->
+        <div class="carousel-item">
+
+          <div class="row">
+            <h2 class="col-md-12 col-sm-12 center"> Places to visit</h2>
+
+            <div class="col-md-4">
+              <div class="card mb-2">
+                <img class="card-img-top" style="height: 250px;" src="kashmir.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title fonts">Kashmir</h4>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" style="height: 250px;" src="kerela1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title fonts">Kerela</h4>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" style="height: 250px;" src="taj.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title fonts">Agra</h4>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--/.Second slide-->
+
+        <!--Third slide-->
+        <div class="carousel-item">
+
+          <div class="row">
+            <h2 class="col-md-12 col-sm-12 center"> Places to visit</h2>
+
+            <div class="col-md-4">
+              <div class="card mb-2">
+                <img class="card-img-top" style="height: 250px;" src="goa.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title fonts">Goa</h4>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" style="height: 250px;" src="meghalaya.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title fonts">Meghalaya</h4>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" style="height: 250px;" src="galaxy.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title fonts">Himalayas</h4>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--/.Third slide-->
+
+      </div>
+      <!--/.Slides-->
+
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#multi-item-example" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#multi-item-example" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+    <!--/.Carousel Wrapper-->
+
+
   </div>
 
+  <hr class="my-4">
 
-<hr class="my-4">
-  <div class="row">
-    <h2 class="col-md-12 col-xs-12"> Culture</h2>
-    <img src="india-culture.jpg" class=" img-content col-xs-12 col-sm-2.5" alt='History'>
-    <p class="col-md-9.5 col-sm-9.5 content-para ">"Culture is defined as a people’s way of life. It also entails how they dress, how they speak, the type of food they eat, the manner in which they worship, and their art among many other things.
-Indian Culture is one of the oldest cultures in the world.Because of the population diversity, there is immense variety in Indian culture. The Indian culture is a blend of various cultures belonging to belonging to diverse religion, castes, regions follow their own tradition and culture."</p>
+
+  <!-- Religion -->
+  <div class="container">
+    <div class="row">
+      <h2 class="col-md-12 col-sm-12 center"> Unity in Diversity</h2>
+
+      <div class="card col-sm-4 justify-content-centre" style="width: 18rem;">
+        <img class="card-img-top img-religion" src="hindu.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title fonts">Hinduism</h5>
+          <!-- <p class="card-text fonts">Hinduism is the largest religion in India, with 79.8% of the population identifying themselves as Hindus, that accounts for 966 million Hindus in India as of National Census of India in 2011.</p> -->
+
+        </div>
+      </div>
+      <div class="card  col-sm-4" style="width: 18rem;">
+        <img class="card-img-top img-religion" src="muslim.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title fonts">Islam</h5>
+          <!-- <p class="card-text fonts">Islam in India. Islam is the second-largest religion in India and Islamic Community of India is the official representative community of India, with 14.2% of the country's population or approx. 172 million people identifying as adherents of Islam (2011 census).</p> -->
+
+        </div>
+      </div>
+      <div class="card col-sm-4" style="width: 18rem;">
+        <img class="card-img-top img-religion" src="sikh.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title fonts">Sikhism</h5>
+          <!-- <p class="card-text fonts">Out of the total Sikhs in India, 77% are concentrated in state of Punjab. Sikhism is the dominant religion in Punjab, where it is followed by 58% of the population, the only Indian state where Sikhism is the majority faith.</p> -->
+
+        </div>
+      </div>
+
+      <div class="card col-sm-4" style="width: 18rem;">
+        <img class="card-img-top img-religion" src="christian.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title fonts">Christian</h5>
+          <!-- <p class="card-text fonts">Christianity is India's third-largest religion after Hinduism and Islam, with approximately 28 million followers, constituting 2.3 percent of India's population (2011 census).</p> -->
+
+        </div>
+      </div>
+      <div class="card col-sm-4" style="width: 18rem;">
+        <img class="card-img-top img-religion" src="dalai-lama.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title fonts">Buddhism</h5>
+          <!-- <p class="card-text fonts">According to the 2011 census, Buddhists make up 0.7% of India's population, or 8.4 million individuals. Traditional Buddhists are less than 13% and Navayana Buddhists (Converted, Ambedkarite or Neo-Buddhists) comprise more than 87% of Indian Buddhist community according to 2011 Census of India.</p> -->
+
+        </div>
+      </div>
+      <div class="card   col-sm-4" style="width: 18rem;">
+        <img class="card-img-top img-religion" src="jain.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title fonts">Jainism</h5>
+          <!--  <p class="card-text fonts">Jainism is India's sixth-largest religion and is practiced throughout India. ... Jains can be found in 34 out of 35 states and union territories, with Lakshdweep being the only union territory without Jains. The state of Jharkhand, with a population of 16,301 Jains also contains the holy pilgrimage centre of Shikharji.</p> -->
+
+        </div>
+      </div>
+    </div>
+    <!-- Wanna go ? -->
+    <center>
+      <hr class="my-4">
+      <h2 class="wanna_go container-fluid">Want To Go ?</h2>
+    </center>
+      <form>
+        <div class="form-group">
+          <label for="name" style="color: #37120a;">Name</label>
+          <input type="name" class="form-control" id="exampleInputName" style="border-color:#37120a;" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1" style="color: #37120a;">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" style="border-color:#37120a;" aria-describedby="emailHelp" required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1" style="color: #37120a;">Your Comments</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="border-color:#37120a;"></textarea>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+          <label class="form-check-label" for="exampleCheck1" style="color: #37120a;">Was This Helpful?</label>
+        </div>
+        <center>
+      
+          
+          <button class="btn btn-primary " style="background-color: #37120a;"  formaction="#">Hell Yeahh !!</button>
+      
+      </center>
+      </form>
+      <center><form ><button class="btn btn-primary " style="background-color: #37120a; margin-top: 5px;"  formaction="layout.html">Back to Home</button></form></center>
+    <!--Footer  -->
+    <footer class="footer">
+      <div class ="foot box container">
+      <center><span class="text-muted ">&copy;All rights reserved to iTravel</span></center>	
+      </div>
+    </footer>
   </div>
-
-
-<hr class="my-4">
-  <div class="row">
-    <h2 class="col-md-12 col-sm-12"> Food</h2>
-    <p class="col-md-9.5 col-xs-12 content-para">"Indian cuisine consists of a wide variety of regional and traditional cuisines native to the Indian subcontinent. Given the range of diversity in soil type, climate, culture, ethnic groups, and occupations, these cuisines vary substantially from each other and use locally available spices, herbs, vegetables, and fruits. Indian food is also heavily influenced by religion, in particular Hinduism, cultural choices and traditions.[1] The cuisine is also influenced by centuries of Islamic rule, particularly the Mughal rule."</p>
-    <img src="food_in.jpg" class="img-content  col-sm-2.5 col-xs-12" alt='History'>
-  </div>
-</div>
-<hr class="my-4">
-
-<!-- Religion -->
-<div class="container">
-  <div class="row">
-    <h2 class="col-md-12 col-sm-12 center"> Unity in Diversity</h2>
  
-  <div class="card col-sm-4 justify-content-centre" style="width: 18rem;">
-  <img class="card-img-top img-religion" src="hindu.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title fonts">Hinduism</h5>
-    <!-- <p class="card-text fonts">Hinduism is the largest religion in India, with 79.8% of the population identifying themselves as Hindus, that accounts for 966 million Hindus in India as of National Census of India in 2011.</p> -->
-   
-  </div>
-</div>
-<div class="card  col-sm-4" style="width: 18rem;">
-  <img class="card-img-top img-religion" src="muslim.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title fonts">Islam</h5>
-    <!-- <p class="card-text fonts">Islam in India. Islam is the second-largest religion in India and Islamic Community of India is the official representative community of India, with 14.2% of the country's population or approx. 172 million people identifying as adherents of Islam (2011 census).</p> -->
-    
-  </div>
-</div>
-<div class="card col-sm-4" style="width: 18rem;">
-  <img class="card-img-top img-religion" src="sikh.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title fonts">Sikhism</h5>
-    <!-- <p class="card-text fonts">Out of the total Sikhs in India, 77% are concentrated in state of Punjab. Sikhism is the dominant religion in Punjab, where it is followed by 58% of the population, the only Indian state where Sikhism is the majority faith.</p> -->
-   
-  </div>
-</div>  
-
-  <div class="card col-sm-4" style="width: 18rem;">
-  <img class="card-img-top img-religion" src="christian.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title fonts">Christian</h5>
-    <!-- <p class="card-text fonts">Christianity is India's third-largest religion after Hinduism and Islam, with approximately 28 million followers, constituting 2.3 percent of India's population (2011 census).</p> -->
-    
-  </div>
-</div>
-<div class="card col-sm-4" style="width: 18rem;">
-  <img class="card-img-top img-religion" src="dalai-lama.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title fonts">Buddhism</h5>
-    <!-- <p class="card-text fonts">According to the 2011 census, Buddhists make up 0.7% of India's population, or 8.4 million individuals. Traditional Buddhists are less than 13% and Navayana Buddhists (Converted, Ambedkarite or Neo-Buddhists) comprise more than 87% of Indian Buddhist community according to 2011 Census of India.</p> -->
-    
-  </div>
-</div>  
-<div class="card   col-sm-4" style="width: 18rem;">
-  <img class="card-img-top img-religion" src="jain.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title fonts">Jainism</h5>
-   <!--  <p class="card-text fonts">Jainism is India's sixth-largest religion and is practiced throughout India. ... Jains can be found in 34 out of 35 states and union territories, with Lakshdweep being the only union territory without Jains. The state of Jharkhand, with a population of 16,301 Jains also contains the holy pilgrimage centre of Shikharji.</p> -->
-    
-  </div>  
-</div>
- </div>
-</div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+
 </html>
