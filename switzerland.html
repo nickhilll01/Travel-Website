@@ -9,18 +9,16 @@
   <link rel="stylesheet" type="text/css" href="switzerland.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="layout.css">
   <link
     href="https://fonts.googleapis.com/css?family=Caveat|Dancing+Script|EB+Garamond|Indie+Flower|Liu+Jian+Mao+Cao|Pacifico&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <!-- Navigation -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <b> <a class="navbar-brand fonts" href="layout.html"><span style="color:  #37120a;">iTravel</span></a></b>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,10 +27,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <!-- <li class="nav-item active">
-          <a class="nav-link fonts" href="layout.html">Home <span class="sr-only">(current)</span></a>
-        </li> -->
+        <a class="nav-link fonts" href="layout.html">Home <span class="sr-only">(current)</span></a>
+      </li>  -->
         <li class="nav-item active">
-          <a class="nav-link fonts" href="#">Contact</a>
+          <a class="nav-link fonts" data-toggle="modal" data-target="#contactModal">Contact</a>
         </li>
         <li class="nav-item dropdown active">
           <a class="nav-link dropdown-toggle fonts" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -40,25 +38,190 @@
             Find Discount
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Flights</a>
+            <a class="dropdown-item fonts" data-toggle="modal" data-target="#flightModal">Flights</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item fonts" href="#">Hotels</a>
             <a class="dropdown-item fonts" href="#">Restraunts</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled fonts" href="#">Sign In</a>
+          <a class="nav-link disabled fonts" data-toggle="modal" data-target="#exampleModal">Sign In</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled fonts" href="#">Sign Up</a>
-        </li>
+        <!-- <li class="nav-item">
+        <a class="nav-link disabled fonts" href="#">Sign Up</a>
+      </li> -->
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search Places to Travel" aria-label="Search">
-        <button class="btn btn-outline-dark my-2 my-sm-0 fonts" type="submit">Search</button>
+        <input id="place-input" class="form-control mr-sm-2 fonts" type="search" placeholder="Search Places to Travel"
+          aria-label="Search">
+        <button class="btn btn-outline-dark my-2 my-sm-0 fonts" type="button" onclick="getInputValue();">Search</button>
       </form>
     </div>
   </nav>
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="width: 600px;">
+        <div class="modal-header">
+          <b>
+            <h5 class="modal-title " id="exampleModalLabel"
+              style="color:  #37120a; font-family: Source Sans Pro; margin: auto  ;">Contact Details:</h5>
+          </b>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+        </div>
+
+        <div class="modal-body ">
+          <div class="col-sm-12 col-md-12 only-contact">
+            <b>
+              <p class="col-md-6 col-sm-6 col-xs-6" style="color:  #37120a; font-family: Source Sans Pro;"><span> <img
+                    src="icon-map.png"> </span>Location: <br>
+            </b>
+            <ul style="list-style: none;">
+              <li>Keas 69 Str.</li>
+              <li>15234, Chalandri</li>
+              <li>Athens,</li>
+              <li>Greece</li>
+              <li>Pin Code: 11852</li>
+            </ul>
+            </p>
+            <b>
+              <p class="col-md-6 col-sm-6 col-xs-6" style="color:  #37120a; font-family: Source Sans Pro;"> <span> <img
+                    src="icon-phone.png"> </span>Phone No:<br>
+            </b>
+            <ul style="list-style: none; ">
+              <li>+30-2106019311 (landline)</li>
+              <li>+30-6977664062 (mobile phone)</li>
+            </ul>
+            </p>
+            <b>
+              <p class="col-md-6 col-sm-6 col-xs-6" style="color:  #37120a; font-family: Source Sans Pro;"> <span> <img
+                    src="icon-mail.png">
+                </span>Email:<br>
+            </b>
+            <ul style="list-style: none;">
+              <li>itravel.support.in</li>
+            </ul>
+            </p>
+            <b>
+              <p class="col-md-6 col-sm-6 col-xs-6" style="color:  #37120a; font-family: Source Sans Pro;"><span> <img
+                    src="icon-time.png">
+                </span>Timings:<br>
+            </b>
+            <ul style="list-style: none;">
+              <li>Monday–Friday 10:00–17:00</li>
+            </ul>
+            </p>
+          </div>
+          <!-- Athens Google Map -->
+          <div style="width: 100%"><iframe width="100%" height="350"
+              src="https://maps.google.com/maps?width=100%&height=350&hl=en&q=Athens%20%2C%20Greece+(Athens)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+              frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a
+                href="https://www.mapsdirections.info/en/measure-map-radius/">Measure circle on map</a></iframe></div>
+          <br />
+          <!-- Athens Google Map -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign in Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title " id="exampleModalLabel"
+            style="color:  #37120a; font-family: Source Sans Pro; ">Member Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" required>
+              <a href="">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary cls_btn">Submit</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Flight Modal -->
+  <div class="modal fade" id="flightModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title " id="exampleModalLabel" style="color:  #37120a; font-family: Source Sans Pro;">Book
+            Flights With Us:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- From -->
+          
+          <p style="color:  #37120a; font-family: Source Sans Pro;">From:</p>
+          <div class="dropdown">
+            <a style="border: 2px solid #37120a; padding: 5px; border-radius: 5px;" aria-expanded="false"
+              aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle col-md-6" href="#" >
+              <span id="From" style="color:#37120a ;">-----</span><span class="caret"></span></a>
+            <ul class="dropdown-menu from col-md-6" > 
+              
+              <li><a class="dropdown-item fonts">India</a></li>
+              <li><a class="dropdown-item fonts">Africa</a></li>
+              <li><a class="dropdown-item fonts">Sri Lanka</a></li>
+              <li><a class="dropdown-item fonts">Italy</a></li>
+              <li><a class="dropdown-item fonts">Dubai</a></li>
+              <li><a class="dropdown-item fonts">Switzerland</a></li>
+              
+            </ul>
+          </div>
+          <div class="dropdown-divider"></div>
+
+          <!-- To -->
+
+          <p style="color:  #37120a; font-family: Source Sans Pro;">To:</p>
+          <div class="dropdown" required>
+            <a style="border: 2px solid #37120a; padding: 5px; border-radius: 5px; " aria-expanded="false"
+              aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle col-md-6" href="#" required>
+              <span id="To" style="color:#37120a ;">-----</span><span class="caret"></span></a>
+            <ul class="dropdown-menu to col-md-6" >
+              <li><a class="dropdown-item fonts">India</a></li>
+              <li><a class="dropdown-item fonts">Africa</a></li>
+              <li><a class="dropdown-item fonts">Sri Lanka</a></li>
+              <li><a class="dropdown-item fonts">Italy</a></li>
+              <li><a class="dropdown-item fonts">Dubai</a></li>
+              <li><a class="dropdown-item fonts">Switzerland</a></li>
+              
+            </ul>
+          </div>
+          <hr class="my-4">
+          <form action="switzerland.html">
+          <button type="submit" style="color: white; background-color: #37120a; padding: 5px 10px; border-radius: 8px; margin: auto 33%;" onclick="bookFlight();">Book</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
   <h1 class="fonts" style="margin-bottom: 8px;">Switzerland</h1>
   <!-- Carousel -->
   <div id="demo" class="carousel slide" data-ride="carousel">
@@ -152,7 +315,7 @@
     <hr class="my-4">
     <div class="row">
       <h2 class=" col-md-12 col-sm-12"> History</h2>
-      <p class="content-para col-md-9.5 col-xs-12 ">"Few countries have been on such a roller-coaster ride as Italy. The Italian peninsula lay at the core of the Roman Empire; one of the world’s great monotheistic religions, Catholicism, has its headquarters in Rome; and it was largely the dynamic city-states of Italy that set the modern era in motion with the Renaissance. But Italy has known chaos and deep suffering, too."</p>
+      <p class="content-para col-md-9.5 col-xs-12 ">"Originally inhabited by the Helvetians, or Helvetic Celts, the territory comprising modern Switzerland came under Roman rule during the Gallic wars in the 1st century BC and remained a Roman province until the 4th century AD. Under Roman influence, the population reached a high level of civilization and enjoyed a flourishing commerce. Important cities, such as Geneva, Basel, and Zurich, were linked by military roads that also served as trade arteries between Rome and the northern tribes."</p>
       <img src="switzerland_history.jpg" class="img-content  col-sm-2.5 col-xs-12 " alt='History'>
     </div>
 
@@ -161,7 +324,7 @@
     <div class="row">
       <h2 class="col-md-12 col-xs-12"> Culture</h2>
       <img src="switzerland_culture.jpg" class=" img-content col-xs-12 col-sm-2.5" alt='History'>
-      <p class="col-md-9.5 col-sm-9.5 content-para ">"The Italian culture is commonly associated with art, music and food. It is the homeland of the Roman Empire, the Roman Catholic Church and the main center of the Renaissance, which flourished through Europe for centuries."</p>
+      <p class="col-md-9.5 col-sm-9.5 content-para ">"The Swiss culture is distinguished by its diversity, as the country lies at the crossroads of several outstanding European cultures. Switzerland is also a multilingual country, as its national languages include German, French, Italian and Romansh. In addition, there are numerous dialects spoken in every region"</p>
     </div>
 
 
@@ -402,7 +565,7 @@
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="border-color:#37120a;"></textarea>
       </div>
       <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" >
         <label class="form-check-label" for="exampleCheck1" style="color: #37120a;">Was This Helpful?</label>
       </div>
       <center>
@@ -425,6 +588,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="layout.js"></script>
 </body>
 
 </html>

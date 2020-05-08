@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Travel Ethics</title>
+    <link rel="stylesheet" type="text/css" href="travel_ethics.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="layout.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Caveat|Dancing+Script|EB+Garamond|Indie+Flower|Liu+Jian+Mao+Cao|Pacifico&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <b> <a class="navbar-brand fonts" href="layout.html"><span style="color:  #37120a;">iTravel</span></a></b>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item active">
+        <a class="nav-link fonts" href="layout.html">Home <span class="sr-only">(current)</span></a>
+      </li>  -->
+        <li class="nav-item active">
+          <a class="nav-link fonts" data-toggle="modal" data-target="#contactModal">Contact</a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle fonts" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Find Discount
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item fonts" data-toggle="modal" data-target="#flightModal">Flights</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item fonts" href="#">Hotels</a>
+            <a class="dropdown-item fonts" href="#">Restraunts</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled fonts" data-toggle="modal" data-target="#exampleModal">Sign In</a>
+        </li>
+        <!-- <li class="nav-item">
+        <a class="nav-link disabled fonts" href="#">Sign Up</a>
+      </li> -->
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input id="place-input" class="form-control mr-sm-2 fonts" type="search" placeholder="Search Places to Travel"
+          aria-label="Search">
+        <button class="btn btn-outline-dark my-2 my-sm-0 fonts" type="button" onclick="getInputValue();">Search</button>
+      </form>
+    </div>
+  </nav>
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="width: 600px;">
+        <div class="modal-header">
+          <b>
+            <h5 class="modal-title " id="exampleModalLabel"
+              style="color:  #37120a; font-family: Source Sans Pro; margin: auto  ;">Contact Details:</h5>
+          </b>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+        </div>
+
+        <div class="modal-body ">
+          <div class="col-sm-12 col-md-12 only-contact">
+            <b>
+              <p class="col-md-6 col-sm-6 col-xs-6" style="color:  #37120a; font-family: Source Sans Pro;"><span> <img
+                    src="icon-map.png"> </span>Location: <br>
+            </b>
+            <ul style="list-style: none;">
+              <li>Keas 69 Str.</li>
+              <li>15234, Chalandri</li>
+              <li>Athens,</li>
+              <li>Greece</li>
+              <li>Pin Code: 11852</li>
+            </ul>
+            </p>
+            <b>
+              <p class="col-md-6 col-sm-6 col-xs-6" style="color:  #37120a; font-family: Source Sans Pro;"> <span> <img
+                    src="icon-phone.png"> </span>Phone No:<br>
+            </b>
+            <ul style="list-style: none; ">
+              <li>+30-2106019311 (landline)</li>
+              <li>+30-6977664062 (mobile phone)</li>
+            </ul>
+            </p>
+            <b>
+              <p class="col-md-6 col-sm-6 col-xs-6" style="color:  #37120a; font-family: Source Sans Pro;"> <span> <img
+                    src="icon-mail.png">
+                </span>Email:<br>
+            </b>
+            <ul style="list-style: none;">
+              <li>itravel.support.in</li>
+            </ul>
+            </p>
+            <b>
+              <p class="col-md-6 col-sm-6 col-xs-6" style="color:  #37120a; font-family: Source Sans Pro;"><span> <img
+                    src="icon-time.png">
+                </span>Timings:<br>
+            </b>
+            <ul style="list-style: none;">
+              <li>Monday–Friday 10:00–17:00</li>
+            </ul>
+            </p>
+          </div>
+          <!-- Athens Google Map -->
+          <div style="width: 100%"><iframe width="100%" height="350"
+              src="https://maps.google.com/maps?width=100%&height=350&hl=en&q=Athens%20%2C%20Greece+(Athens)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+              frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a
+                href="https://www.mapsdirections.info/en/measure-map-radius/">Measure circle on map</a></iframe></div>
+          <br />
+          <!-- Athens Google Map -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign in Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title " id="exampleModalLabel"
+            style="color:  #37120a; font-family: Source Sans Pro; ">Member Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" required>
+              <a href="">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary cls_btn">Submit</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Flight Modal -->
+  <div class="modal fade" id="flightModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title " id="exampleModalLabel"
+          style="color:  #37120a; font-family: Source Sans Pro; margin: auto auto ;">Book Flights With Us:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <!-- Travel Ethics Heading -->
+    <h1 class="fonts travel col-sm-12 col-xs-12" style="color: white;">Travel Ethics</h1>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron" style="margin-top: 15px;">
+        <hr class="my-4">
+        <blockquote class="blockquote fonts">
+
+            <p class="mb-0" style=" font-size: 30px; color:  #37120a "> <span style="font-size: 50px;">"</span> Welcome
+                to our simple and proven guide on how to be a responsible traveller in 2020.
+
+                We believe that through the ways we travel, the regions we decide to visit, and the choices we make on
+                how we spend our money and where , can have a positive impact on communities and families that are not
+                as fortunate as ourselves.
+
+                <br> Another name for it is ‘responsible travel'.<span style="font-size: 50px;">"</span> </p>
+
+        </blockquote>
+        <hr class="my-4">
+
+    </div>
+
+    <!-- Cards -->
+    <div class="container" style="margin: auto auto;">
+        <div class="row fonts">
+            <div class="card col-md-4 col-sm-6 col-xs-12 justify-content-centre" style="width: 18rem;">
+                <div class="card-body" style="border: 2px solid  #37120a;">
+                    <h3 class="card-title fonts ethics" style="color: white;"># Pack Light & Explore Your Own Backyard
+                    </h3>
+                    <hr class="my-4">
+                    <ul style="font-size: 22px;">
+                        <li>Don't buy unnecessary travel items</li>
+                        <hr class="my-4">
+                        <li>Pack Light</li>
+                        <hr class="my-4">
+                        <li>Explore Your own country first , then travel abroad.</li>
+                        <hr class="my-4">
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="card col-md-4 col-sm-6 col-xs-12 justify-content-centre" style="width: 18rem;">
+                <div class="card-body" style="border: 2px solid  #37120a;">
+                    <h3 class="card-title fonts ethics" style="color: white;"># Shop Locally
+                    </h3>
+                    <hr class="my-4">
+                    <ul style="font-size: 22px;">
+                        <li>Your money can have a massive impact on the community.</li>
+                        <hr class="my-4">
+                        <li>Your money will help someone create a better life.</li>
+                        <hr class="my-4">
+                        <li>It will be a more authentic travel experience for yourself.</li>
+                        <hr class="my-4">
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="card col-md-4 col-sm-6 col-xs-12 justify-content-centre" style="width: 18rem;">
+                <div class="card-body" style="border: 2px solid  #37120a;">
+                    <h3 class="card-title fonts ethics" style="color: white;"># Minimize your waste
+                    </h3>
+                    <hr class="my-4">
+                    <ul style="font-size: 22px;">
+                        <li>Say no to plastic bags</li>
+                        <hr class="my-4">
+                        <li>Eat and drink in the cafe rather than going for take away</li>
+                        <hr class="my-4">
+                        <li>Carry a reusable water bottle with you and fill up where water is available .</li>
+                        <hr class="my-4">
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="card col-md-4 col-sm-6 col-xs-12 justify-content-centre" style="width: 18rem;">
+                <div class="card-body" style="border: 2px solid  #37120a;">
+                    <h3 class="card-title fonts ethics" style="color: white;"># Respect the Local Culture
+                    </h3>
+                    <hr class="my-4">
+                    <ul style="font-size: 22px;">
+                        <li>Learn about different cultures and religions.</li>
+                        <hr class="my-4">
+                        <li>Show respect to local customs and traditions.</li>
+                        <hr class="my-4">
+                        <li>Pre-study the local customs of the place , so that you don't inadvertently offend anyone.
+                        </li>
+                        <hr class="my-4">
+                        <li>Wear appropriate clothes.</li>
+                        <hr class="my-4">
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="card col-md-4 col-sm-6 col-xs-12 justify-content-centre" style="width: 18rem;">
+                <div class="card-body" style="border: 2px solid  #37120a;">
+                    <h3 class="card-title fonts ethics" style="color: white;"># Don't give to beggars
+                    </h3>
+                    <hr class="my-4">
+                    <ul style="font-size: 22px;">
+                        <li>Begging only encourages local people to continue asking tourists for money.</li>
+                        <hr class="my-4">
+                        <li>Often people pretend to be poor , so as to extort money from foreigners.</li>
+                        <hr class="my-4">
+                        <li>If you really want to help out, perhaps buy the person some food or water instead.</li>
+                        <hr class="my-4">
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="card col-md-4 col-sm-6 col-xs-12 justify-content-centre" style="width: 18rem;">
+                <div class="card-body" style="border: 2px solid  #37120a;">
+                    <h3 class="card-title fonts ethics" style="color: white;"># Educate others to be Responsible
+                        Travellers
+                    </h3>
+                    <hr class="my-4">
+                    <ul style="font-size: 22px;">
+                        <li>Some people are not aware of the implications their actions can have. </li>
+                        <hr class="my-4">
+                        <li>If you see someone unintentionally doing detrimental things then correct them in a friendly
+                            way.</li>
+                        <hr class="my-4">
+                        <li>Start discussions about responsible travel with people in your hostel.</li>
+                        <hr class="my-4">
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron" style="margin-top: 15px;">
+        <hr class="my-4">
+        <blockquote class="blockquote fonts">
+
+            <p class="mb-0" style=" font-size: 30px; color:  #37120a ">
+                <span style="font-size: 50px;">"</span>
+                Remember, our actions can have a big impact on the world while we travel.<br> Make sure it is a positive
+                one.
+                <span style="font-size: 50px;">"</span> </p>
+
+        </blockquote>
+        <hr class="my-4">
+
+    </div>
+    <center>
+        <form>
+            <button class="btn btn-primary fonts"
+                style="background-color: #37120a; padding: 10 50px ; font-size: 22px; color: white;"
+                formaction="layout.html">Happy Traveling!!!</button>
+        </form>
+    </center>
+    <footer class="footer">
+        <div class="foot box container-fluid">
+            <center><span class="text-muted ">&copy;All rights reserved to iTravel</span></center>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+      <script src="layout.js"></script>
+</body>
+
+</html>

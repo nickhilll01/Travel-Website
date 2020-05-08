@@ -1,179 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Layout_bootstrap</title>
-	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="layout.css">
-	<link href="https://fonts.googleapis.com/css?family=Caveat|Dancing+Script|EB+Garamond|Indie+Flower|Liu+Jian+Mao+Cao|Pacifico&display=swap" rel="stylesheet"> 
+  <title>Layout_bootstrap</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="layout.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Caveat|Dancing+Script|EB+Garamond|Indie+Flower|Liu+Jian+Mao+Cao|Pacifico&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
+
 <body>
-<!-- Navigation -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <b> <a class="navbar-brand fonts" href="layout.html"><span style="color:  #37120a;">iTravel</span></a></b>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <!-- <li class="nav-item active">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item active">
         <a class="nav-link fonts" href="layout.html">Home <span class="sr-only">(current)</span></a>
       </li>  -->
-      <li class="nav-item active">
-        <a class="nav-link fonts" href="#">Contact</a>
-      </li>
-      <li class="nav-item dropdown active">
-        <a class="nav-link dropdown-toggle fonts" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Find Discount 
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item fonts" href="#">Flights</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item fonts" href="#">Hotels</a>
-          <a class="dropdown-item fonts" href="#">Restraunts</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled fonts" href="#">Sign In</a>
-      </li>
-      <li class="nav-item">
+        <li class="nav-item active">
+          <a class="nav-link fonts" data-toggle="modal" data-target="#contactModal">Contact</a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle fonts" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Find Discount
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item fonts" data-toggle="modal" data-target="#flightModal">Flights</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item fonts" href="#">Hotels</a>
+            <a class="dropdown-item fonts" href="#">Restraunts</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled fonts" data-toggle="modal" data-target="#exampleModal">Sign In</a>
+        </li>
+        <!-- <li class="nav-item">
         <a class="nav-link disabled fonts" href="#">Sign Up</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2 fonts" type="search" placeholder="Search Places to Travel" aria-label="Search">
-      <button class="btn btn-outline-dark my-2 my-sm-0 fonts" type="submit">Search</button>
+      </li> -->
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input id="place-input" class="form-control mr-sm-2 fonts" type="search" placeholder="Search Places to Travel"
+          aria-label="Search">
+        <button class="btn btn-outline-dark my-2 my-sm-0 fonts" type="button" onclick="getInputValue();">Search</button>
+      </form>
+    </div>
+  </nav>
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="width: 600px;">
+        <div class="modal-header">
+          <b>
+            <h5 class="modal-title " id="exampleModalLabel"
+              style="color:  #37120a; font-family: Source Sans Pro; margin: auto  ;">Contact Details:</h5>
+          </b>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+        </div>
+
+        <div class="modal-body ">
+          <div class="col-sm-12 col-md-12 only-contact">
+            <b>
+              <p class="col-md-6 col-sm-6 col-xs-6" style="color:  #37120a; font-family: Source Sans Pro;"><span> <img
+                    src="icon-map.png"> </span>Location: <br>
+            </b>
+            <ul style="list-style: none;">
+              <li>Keas 69 Str.</li>
+              <li>15234, Chalandri</li>
+              <li>Athens,</li>
+              <li>Greece</li>
+              <li>Pin Code: 11852</li>
+            </ul>
+            </p>
+            <b>
+              <p class="col-md-6 col-sm-6 col-xs-6" style="color:  #37120a; font-family: Source Sans Pro;"> <span> <img
+                    src="icon-phone.png"> </span>Phone No:<br>
+            </b>
+            <ul style="list-style: none; ">
+              <li>+30-2106019311 (landline)</li>
+              <li>+30-6977664062 (mobile phone)</li>
+            </ul>
+            </p>
+            <b>
+              <p class="col-md-6 col-sm-6 col-xs-6" style="color:  #37120a; font-family: Source Sans Pro;"> <span> <img
+                    src="icon-mail.png">
+                </span>Email:<br>
+            </b>
+            <ul style="list-style: none;">
+              <li>itravel.support.in</li>
+            </ul>
+            </p>
+            <b>
+              <p class="col-md-6 col-sm-6 col-xs-6" style="color:  #37120a; font-family: Source Sans Pro;"><span> <img
+                    src="icon-time.png">
+                </span>Timings:<br>
+            </b>
+            <ul style="list-style: none;">
+              <li>Monday–Friday 10:00–17:00</li>
+            </ul>
+            </p>
+          </div>
+          <!-- Athens Google Map -->
+          <div style="width: 100%"><iframe width="100%" height="350"
+              src="https://maps.google.com/maps?width=100%&height=350&hl=en&q=Athens%20%2C%20Greece+(Athens)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+              frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a
+                href="https://www.mapsdirections.info/en/measure-map-radius/">Measure circle on map</a></iframe></div>
+          <br />
+          <!-- Athens Google Map -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign in Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title " id="exampleModalLabel" style="color:  #37120a; font-family: Source Sans Pro; ">Member
+            Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" required>
+              <a href="">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary cls_btn">Submit</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Flight Modal -->
+  <div class="modal fade" id="flightModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title " id="exampleModalLabel" style="color:  #37120a; font-family: Source Sans Pro;">Book
+            Flights With Us:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- From -->
+          
+          <p style="color:  #37120a; font-family: Source Sans Pro;">From:</p>
+          <div class="dropdown">
+            <a style="border: 2px solid #37120a; padding: 5px; border-radius: 5px;" aria-expanded="false"
+              aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle col-md-6" href="#" >
+              <span id="From" style="color:#37120a ;">-----</span><span class="caret"></span></a>
+            <ul class="dropdown-menu from col-md-6" > 
+              
+              <li><a class="dropdown-item fonts">India</a></li>
+              <li><a class="dropdown-item fonts">Africa</a></li>
+              <li><a class="dropdown-item fonts">Sri Lanka</a></li>
+              <li><a class="dropdown-item fonts">Italy</a></li>
+              <li><a class="dropdown-item fonts">Dubai</a></li>
+              <li><a class="dropdown-item fonts">Switzerland</a></li>
+              
+            </ul>
+          </div>
+          <div class="dropdown-divider"></div>
+
+          <!-- To -->
+
+          <p style="color:  #37120a; font-family: Source Sans Pro;">To:</p>
+          <div class="dropdown" required>
+            <a style="border: 2px solid #37120a; padding: 5px; border-radius: 5px; " aria-expanded="false"
+              aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle col-md-6" href="#" required>
+              <span id="To" style="color:#37120a ;">-----</span><span class="caret"></span></a>
+            <ul class="dropdown-menu to col-md-6" >
+              <li><a class="dropdown-item fonts">India</a></li>
+              <li><a class="dropdown-item fonts">Africa</a></li>
+              <li><a class="dropdown-item fonts">Sri Lanka</a></li>
+              <li><a class="dropdown-item fonts">Italy</a></li>
+              <li><a class="dropdown-item fonts">Dubai</a></li>
+              <li><a class="dropdown-item fonts">Switzerland</a></li>
+              
+            </ul>
+          </div>
+          <hr class="my-4">
+          <form action="layout.html">
+          <button type="submit" style="color: white; background-color: #37120a; padding: 5px 10px; border-radius: 8px; margin: auto 33%;" onclick="bookFlight();">Book</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Heading image -->
+
+  <div class="container-fluid">
+    <div class="header">
+      <img src="tr6.jpg" class="img-fluid head_wrapper" alt="Responsive image">
+    </div>
+    <div class="jumbotron">
+      <hr class="my-4">
+      <blockquote class="blockquote fonts">
+        <i>
+          <p class="mb-0" style="font-size: 38px ; color:  #37120a">"To travel is to live."</p>
+        </i>
+      </blockquote>
+      <hr class="my-4">
+    </div>
+    <!-- Top Locations to Visit -->
+    <div class="container">
+      <h2 class="fonts">Our Guide</h2>
+    </div>
+
+
+
+
+    <!-- Cards -->
+    <div class="container">
+      <div class="row fonts">
+        <div class="card col-md-4 col-sm-6 col-xs-12 justify-content-centre" style="width: 18rem;">
+          <img class="card-img-top" src="india.jpg" alt="Card image cap" style="height: 234px;">
+          <div class="card-body">
+            <h5 class="card-title fonts">India</h5>
+            <p class="card-text ">India, officially the Republic of India, is a country in South Asia. It is the
+              second-most populous country, the seventh-largest country by area, and the most populous democracy in the
+              world.</p>
+              <hr class="my-4">
+            <a href="india.html" class="btn btn-dark">Explore</a>
+          </div>
+        </div>
+        <div class="card col-md-4 col-sm-6 col-xs-12" style="width: 18rem;">
+          <img class="card-img-top" src="africa.jpg" alt="Card image cap" style="height: 234px;">
+          <div class="card-body">
+            <h5 class="card-title fonts">Africa</h5>
+            <p class="card-text ">Africa has 54 sovereign countries—the most on any continent. Africa is bounded by the
+              Mediterranean Sea to the north, by the Atlantic Ocean to the west, by the Red Sea to the northeast, and by
+              the Indian Ocean to the southeast.</p>
+              <hr class="my-4">
+            <a href="africa.html" class="btn btn-dark">Explore</a>
+          </div>
+        </div>
+        <div class="card col-md-4 col-sm-6 col-xs-12" style="width: 18rem;">
+          <img class="card-img-top" src="srilanka.jpg" alt="Card image cap" style="height: 234px;">
+          <div class="card-body">
+            <h5 class="card-title fonts">Sri Lanka</h5>
+            <p class="card-text ">Sri Lanka, formerly Ceylon, island country lying in the Indian Ocean and separated
+              from peninsular India by the Palk Strait. </p>
+              <hr class="my-4">
+            <a href="srilanka.html" class="btn btn-dark">Explore</a>
+          </div>
+        </div>
+        <!-- </div>
+ -->
+        <!-- <div class="row"> -->
+        <div class="card col-md-4 col-sm-6  col-xs-12" style="width: 18rem;">
+          <img class="card-img-top" src="italy.jpg" alt="Card image cap" style="height: 234px;">
+          <div class="card-body">
+            <h5 class="card-title fonts">Italy</h5>
+            <p class="card-text ">Italy, a European country with a long Mediterranean coastline, has left a powerful
+              mark on Western culture and cuisine. Its capital, Rome, is home to the Vatican as well as landmark art and
+              ancient ruins. Other major cities include Florence,Venice , Milan.</p>
+              <hr class="my-4">
+            <a href="italy.html" class="btn btn-dark">Explore</a>
+          </div>
+        </div>
+        <div class="card col-md-4 col-sm-6  col-xs-12" style="width: 18rem;">
+          <img class="card-img-top" src="dubai.jpg" alt="Card image cap" style="height: 234px;">
+          <div class="card-body">
+            <h5 class="card-title fonts">Dubai</h5>
+            <p class="card-text ">Dubai is a city and emirate in the United Arab Emirates known for luxury shopping,
+              ultramodern architecture and a lively nightlife scene. Burj Khalifa, an 830m-tall tower, dominates the
+              skyscraper-filled skyline. At its foot lies Dubai Fountain, with jets and lights choreographed to music.
+            </p>
+            <hr class="my-4">
+            <a href="dubai.html" class="btn btn-dark">Explore</a>
+          </div>
+        </div>
+        <div class="card col-md-4 col-sm-6 col-xs-12  " style="width: 18rem;">
+          <img class="card-img-top" src="switzerland.jpg" alt="Card image cap" style="height: 234px;">
+          <div class="card-body">
+            <h5 class="card-title fonts">Switzerland</h5>
+            <p class="card-text fonts">witzerland is a mountainous Central European country, home to numerous lakes,
+              villages and the high peaks of the Alps. Its cities contain medieval quarters, with landmarks like capital
+              Bern’s Zytglogge clock tower and Lucerne’s wooden chapel bridge. The country is also known for its ski
+              resorts and hiking trails.</p>
+              <hr class="my-4">
+            <a href="switzerland.html" class="btn btn-dark">Explore</a>
+          </div>
+        </div>
+
+      </div>
+      <a href="travel_ethics.html" class="btn btn-lg btn-block btn-dark butt "
+        style="font-family: Source Sans Pro;">Travel Ethics </a>
+    </div>
+
+    <!-- Form -->
+    <div class="container">
+      <h2 class="fonts">Any Travel plans? Let us help you</h2>
+
+      <form action="connect.php" method="POST">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="name" class="form-control" id="firstName" placeholder="Enter First Name" name="firstName" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName" >Last Name</label>
+          <input type="name" class="form-control" id="lastName" placeholder="Enter Last Name" name="lastName" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email"
+            placeholder="Enter email" required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" required>
+        </div>
+        <!-- <div class="form-group">
+          <label for="exampleFormControlSelect1">No. of travellers</label>
+          <select class="form-control" id="exampleFormControlSelect1" name="traveller">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5 or More</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlFile1">Attach Identification Proof</label>
+          <input type="file" class="form-control-file" id="exampleFormControlFile1" name="identification" required>
+        </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="exampleCheck1" name="remember-me">
+          <label class="form-check-label" for="exampleCheck1">Remember me</label>
+        </div> -->
+        
+        <button type="submit" class="btn btn-primary"  style="color: white; background-color: #37120a; padding: 5px 10px; border-radius: 8px; margin: auto 48%;">Submit</button>
+    </div>
     </form>
-  </div>
-</nav>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="foot box container-fluid">
+        <center><span class="text-muted ">&copy;All rights reserved to iTravel</span></center>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+    <script src="layout.js"></script>
 
-<!-- Heading image -->
-
- <div class="container-fluid">
- 	<div class="header">
- 	 	<img src="tr6.jpg" class="img-fluid head_wrapper" alt="Responsive image">	
-	</div>
-	<div class="jumbotron">
-		<hr class="my-4">
-		<blockquote class="blockquote fonts">
-			<i>
-  			<p class="mb-0" style="font-size: 38px ; color:  #37120a">"To travel is to live."</p>
-			</i>
-		</blockquote>
-		<hr class="my-4">
-	</div>
-<!-- Top Locations to Visit -->
-<div class="container">
-	<h2 class="fonts">Our Guide</h2>
-</div>
-
-
-
-
-<!-- Cards -->
-<div class="container">
-<div class="row fonts">
-<div class="card col-md-4 col-sm-6 col-xs-12 justify-content-centre" style="width: 18rem;">
-  <img class="card-img-top" src="india.jpg" alt="Card image cap" style="height: 234px;">
-  <div class="card-body">
-    <h5 class="card-title fonts">India</h5>
-    <p class="card-text ">India, officially the Republic of India, is a country in South Asia. It is the second-most populous country, the seventh-largest country by area, and the most populous democracy in the world.</p>
-    <a href="india.html" class="btn btn-dark">Explore</a>
-  </div>
-</div>
-<div class="card col-md-4 col-sm-6 col-xs-12" style="width: 18rem;">
-  <img class="card-img-top" src="africa.jpg" alt="Card image cap"  style="height: 234px;">
-  <div class="card-body">
-    <h5 class="card-title fonts">Africa</h5>
-    <p class="card-text ">Africa has 54 sovereign countries—the most on any continent. Africa is bounded by the Mediterranean Sea to the north, by the Atlantic Ocean to the west, by the Red Sea to the northeast, and by the Indian Ocean to the southeast.</p>
-    <a href="africa.html" class="btn btn-dark">Explore</a>
-  </div>
-</div>
-<div class="card col-md-4 col-sm-6 col-xs-12" style="width: 18rem;">
-  <img class="card-img-top" src="srilanka.jpg" alt="Card image cap" style="height: 234px;">
-  <div class="card-body">
-    <h5 class="card-title fonts">Sri Lanka</h5>
-    <p class="card-text ">Sri Lanka, formerly Ceylon, island country lying in the Indian Ocean and separated from peninsular India by the Palk Strait. </p>
-    <a href="srilanka.html" class="btn btn-dark">Explore</a>
-  </div>
-</div>	
-<!-- </div>
- --><!-- <div class="row"> -->
-	<div class="card col-md-4 col-sm-6  col-xs-12" style="width: 18rem;">
-  <img class="card-img-top" src="italy.jpg" alt="Card image cap" style="height: 234px;">
-  <div class="card-body">
-    <h5 class="card-title fonts">Italy</h5>
-    <p class="card-text ">Italy, a European country with a long Mediterranean coastline, has left a powerful mark on Western culture and cuisine. Its capital, Rome, is home to the Vatican as well as landmark art and ancient ruins. Other major cities include Florence,Venice , Milan.</p>
-    <a href="italy.html" class="btn btn-dark">Explore</a>
-  </div>
-</div>
-<div class="card col-md-4 col-sm-6  col-xs-12" style="width: 18rem;">
-  <img class="card-img-top" src="dubai.jpg" alt="Card image cap" style="height: 234px;">
-  <div class="card-body">
-    <h5 class="card-title fonts">Dubai</h5>
-    <p class="card-text ">Dubai is a city and emirate in the United Arab Emirates known for luxury shopping, ultramodern architecture and a lively nightlife scene. Burj Khalifa, an 830m-tall tower, dominates the skyscraper-filled skyline. At its foot lies Dubai Fountain, with jets and lights choreographed to music. </p>
-    <a href="dubai.html" class="btn btn-dark">Explore</a>
-  </div>
-</div>	
-<div class="card col-md-4 col-sm-6 col-xs-12  " style="width: 18rem;">
-  <img class="card-img-top" src="switzerland.jpg" alt="Card image cap" style="height: 234px;">
-  <div class="card-body">
-    <h5 class="card-title fonts">Switzerland</h5>
-    <p class="card-text fonts">witzerland is a mountainous Central European country, home to numerous lakes, villages and the high peaks of the Alps. Its cities contain medieval quarters, with landmarks like capital Bern’s Zytglogge clock tower and Lucerne’s wooden chapel bridge. The country is also known for its ski resorts and hiking trails.</p>
-    <a href="switzerland.html" class="btn btn-dark">Explore</a>
-  </div>	
-</div>
-
-</div>
-<button type="button" class="btn btn-lg btn-block btn-dark butt " style="font-family: Source Sans Pro;">Travel Ethics</button>
-</div>
-
-<!-- Form -->
-<div class="container-fluid">
-	<h2 class="fonts">Any Travel plans? Let us help you</h2>
-</div>
-<form >
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-  </div>
-   <div class="form-group">
-    <label for="exampleFormControlSelect1">No. of travellers</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5 or More</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlFile1">Attach Identification Proof</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
-  </div>
-  <div class="form-check">
-    <input type="radio" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Remember me</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-<!-- Footer -->
-<footer class="footer">
-	<div class ="foot box container-fluid">
-	<center><span class="text-muted ">&copy;All rights reserved to iTravel</span></center>	
-	</div>
-</footer>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+
 </html>

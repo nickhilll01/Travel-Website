@@ -39,36 +39,19 @@ body{
 	width: 100%	;
 	padding: 0 15px;
 }
-.modal {
-	text-align: center;
-	padding: 0!important;
-  }
-  .modal:before {
-	content: '';
-	display: inline-block;
-	height: 100%;
-	vertical-align: middle;
-	margin-right: -4px;
-  }
-  .modal-dialog {
-	display: inline-block;
-	text-align: left;
-	vertical-align: middle;
-  }
 
-.cls_btn{
-	margin: auto  30%;
+.travel{
+    border: 2px solid  #37120a;
+    border-radius: 10px;
+    margin: auto auto ;
+    padding: 7px;
+    color: white;
+    background-color: #37120a;
 }
-.map-container{
-	overflow:hidden;
-	padding-bottom:56.25%;
-	position:relative;
-	height:0;
-	}
-	.map-container iframe{
-	left:0;
-	top:0;
-	height:100%;
-	width:100%;
-	position:absolute;
-	}
+
+.ethics{
+    background-color: #37120a;
+    padding: 5px;
+    margin: 0px;
+    border-radius: 7px;
+}
