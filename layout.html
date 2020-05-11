@@ -144,19 +144,19 @@
           </button>
         </div>
         <div class="modal-body">
-          <form>
+          <form action="sign_in.php" method="POST">
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="signemail" required>
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" required>
+              <input type="password" class="form-control" id="exampleInputPassword1" name="signpassword" required>
               <a href="">Forgot Password?</a>
             </div>
 
-            <button type="submit" class="btn btn-primary cls_btn">Submit</button>
+            <input type="submit" class="btn btn-primary"  style="color: white; background-color: #37120a; padding: 5px 10px; border-radius: 8px; margin: auto 33%;" value="Submit"></input>
           </form>
         </div>
 
@@ -311,7 +311,7 @@
           <img class="card-img-top" src="switzerland.jpg" alt="Card image cap" style="height: 234px;">
           <div class="card-body">
             <h5 class="card-title fonts">Switzerland</h5>
-            <p class="card-text fonts">witzerland is a mountainous Central European country, home to numerous lakes,
+            <p class="card-text fonts">Switzerland is a mountainous Central European country, home to numerous lakes,
               villages and the high peaks of the Alps. Its cities contain medieval quarters, with landmarks like capital
               Bern’s Zytglogge clock tower and Lucerne’s wooden chapel bridge. The country is also known for its ski
               resorts and hiking trails.</p>
@@ -329,14 +329,14 @@
     <div class="container">
       <h2 class="fonts">Any Travel plans? Let us help you</h2>
 
-      <form action="connect.php" method="POST">
+      <form method="POST" action="layout.php" >
         <div class="form-group">
           <label for="firstName">First Name</label>
-          <input type="name" class="form-control" id="firstName" placeholder="Enter First Name" name="firstName" required>
+          <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" name="firstName" required>
         </div>
         <div class="form-group">
           <label for="lastName" >Last Name</label>
-          <input type="name" class="form-control" id="lastName" placeholder="Enter Last Name" name="lastName" required>
+          <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" name="lastName" required>
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
@@ -367,7 +367,7 @@
           <label class="form-check-label" for="exampleCheck1">Remember me</label>
         </div> -->
         
-        <button type="submit" class="btn btn-primary"  style="color: white; background-color: #37120a; padding: 5px 10px; border-radius: 8px; margin: auto 48%;">Submit</button>
+        <input type="submit" class="btn btn-primary"  style="color: white; background-color: #37120a; padding: 5px 10px; border-radius: 8px; margin: auto 48%;" value="Submit"></input>
     </div>
     </form>
     <!-- Footer -->
